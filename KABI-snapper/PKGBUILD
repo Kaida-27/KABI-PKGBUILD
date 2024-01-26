@@ -1,0 +1,20 @@
+
+pkgname=KABI-support
+pkgver=1.1.0
+pkgrel=1
+pkgdesc='Support package for enabling Snapper with snap-pac and grub-btrfs'
+arch=(any)
+url='https://github.com/Kaida-27/'
+license=(GPL3)
+depends=(snapper snap-pac grub-btrfs)
+makedepends=(git)
+conflicts=(timeshift-support timeshift timeshift-autosnap)
+source=('snapper-template-KABI' 'grub-btrfs-snapper.path' 'grub-btrfs-snapper.service')
+sha256sums=()
+install="$pkgname".install
+
+package() {
+	install -Dm644 snapper-template-KABI "$pkgdir/etc/snapper/config-templates/root"
+	install -Dm644 grub-btrfs-snapper.path "$pkgdir/usr/lib/systemd/system/grub-btrfs-snapper.path"
+	install -Dm644 grub-btrfs-snapper.service "$pkgdir/usr/lib/systemd/system/grub-btrfs-snapper.service"
+}
