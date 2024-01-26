@@ -1,5 +1,5 @@
 
-pkgname=KABI-support
+pkgname=KABI-snapper-support
 pkgver=1.1.0
 pkgrel=1
 pkgdesc='Support package for enabling Snapper with snap-pac and grub-btrfs'
