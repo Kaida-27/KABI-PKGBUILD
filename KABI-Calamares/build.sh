@@ -1,11 +1,7 @@
 #!/bin/bash
-
-destination1=$HOME"/KABI/"
-
-destiny=$destination1
-
-search1="KABI-calamares"
-search=$search1
+SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+destiny=$SCRIPT_DIR"/KABI/"
+search="KABI-calamares"
 
 tput setaf 2
 echo "#############################################################################################"
@@ -27,11 +23,6 @@ echo "deleting unnecessary folders"
 echo "#############################################################################################"
 
 rm -rf pkg src
-
-echo "deleting unnecessary files"
-echo "#############################################################################################"
-
-rm -r calamares
 
 tput setaf 8
 echo "#############################################################################################"
