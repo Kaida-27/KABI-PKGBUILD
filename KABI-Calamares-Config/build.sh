@@ -1,7 +1,7 @@
 #!/bin/bash
 SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 destiny=$SCRIPT_DIR"/build/"
-search="KABI-Calamares-Config"
+search="KABI-calamares-config"
 
 tput setaf 2
 echo "#############################################################################################"
