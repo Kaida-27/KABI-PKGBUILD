@@ -9,7 +9,7 @@ echo "###################                Installing Build Depends            ###
 echo "#############################################################################################"
 tput sgr0
 
-sudo pacman -S pacman-contrib cmake cppdap jsoncpp rhash boost extra-cmake-modules --needed --noconfirm
+sudo pacman -S pacman-contrib cmake cppdap jsoncpp rhash boost extra-cmake-modules yaml-cpp kbcomp hwinfo qt5-xmlpatterns squashfs-tools libpwquality appstream-qt --needed --noconfirm
 
 
 ( bash $SCRIPT_DIR/KABI-Calamares/build.sh )|& tee $SCRIPT_DIR/build/KABI-Calamares.log
