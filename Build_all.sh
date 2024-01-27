@@ -27,8 +27,6 @@ fi
 
 ( bash $SCRIPT_DIR/snapper-support/build.sh )|& tee $SCRIPT_DIR/build/snapper-support.log
 
-( bash $SCRIPT_DIR/timeshift-support/build.sh )|& tee $SCRIPT_DIR/build/timeshift-support.log
-
 ( bash $SCRIPT_DIR/kora-icon-theme/build.sh )|& tee $SCRIPT_DIR/build/kora-icon-theme.log
 
 ( bash $SCRIPT_DIR/calamares-tool/build.sh )|& tee $SCRIPT_DIR/build/calamares-tool.log
