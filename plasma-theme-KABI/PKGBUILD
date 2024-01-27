@@ -17,5 +17,4 @@ package() {
   install -D /color-schemes/Archlinux.colors /usr/share/color-schemes/
   install -D /color-schemes/AArchlinuxDark.colors /usr/share/color-schemes/
   
-  done
 }
