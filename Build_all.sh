@@ -16,5 +16,8 @@ mkdir $SCRIPT_DIR/build
 
 ( bash $SCRIPT_DIR/calamares-tool/build.sh )|& tee $SCRIPT_DIR/build/calamares-tool.log
 
-
-echo -e "@@@@@ - Done - @@@@@"
+tput setaf 8
+echo "#############################################################################################"
+echo "###################                       build done                   ######################"
+echo "#############################################################################################"
+tput sgr0
