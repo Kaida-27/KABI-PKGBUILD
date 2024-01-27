@@ -6,7 +6,6 @@ arch=('any')
 url="https://github.com/Kaida-27/plasma-theme-KABI"
 license=('CCPL:cc-by-sa')
 depends=('plasma-workspace')
-install="$pkgname.install"
 source=("https://github.com/Kaida-27/plasma-theme-KABI")
 md5sums=('SKIP')
 
