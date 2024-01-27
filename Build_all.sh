@@ -9,7 +9,7 @@ echo "###################                Installing Build Depends            ###
 echo "#############################################################################################"
 tput sgr0
 
-sudo pacman -S pacman-contrib
+sudo pacman -S pacman-contrib cmake cppdap jsoncpp rhash boost extra-cmake-modules --needed --noconfirm
 
 
 ( bash $SCRIPT_DIR/KABI-Calamares/build.sh )|& tee $SCRIPT_DIR/build/KABI-Calamares.log
@@ -26,8 +26,8 @@ sudo pacman -S pacman-contrib
 
 ( bash $SCRIPT_DIR/calamares-tool/build.sh )|& tee $SCRIPT_DIR/build/calamares-tool.log
 
-tput setaf 8
+tput setaf 2
 echo "#############################################################################################"
-echo "###################                       build done                   ######################"
+echo "###################                    ALL build done                  ######################"
 echo "#############################################################################################"
 tput sgr0
