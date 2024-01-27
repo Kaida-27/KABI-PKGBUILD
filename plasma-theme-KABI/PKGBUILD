@@ -11,10 +11,14 @@ md5sums=('SKIP')
 
 package() {
 	cd "${srcdir}/${pkgname}" || exit
-  install -D look-and-feel/org.archlinux.archlinux /usr/share/plasma/look-and-feel/org.archlinux.archlinux
-  install -D wallpapers/Archlinux /usr/share/wallpapers/Archlinux
-  install -D desktoptheme/archlinux /usr/share/plasma/desktoptheme/archlinux
-  install -D /color-schemes/Archlinux.colors /usr/share/color-schemes/
-  install -D /color-schemes/AArchlinuxDark.colors /usr/share/color-schemes/
+  mkdir -p /usr/share/plasma/look-and-feel/org.archlinux.archlinux/
+  cp -r look-and-feel/org.archlinux.archlinux /usr/share/plasma/look-and-feel/org.archlinux.archlinux/
+  mkdir -p /usr/share/wallpapers/Archlinux
+  cp -r  wallpapers/Archlinux /usr/share/wallpapers/Archlinux
+  mkdir -p /usr/share/plasma/desktoptheme/archlinux
+  cp -r  desktoptheme/archlinux /usr/share/plasma/desktoptheme/archlinux
+   mkdir -p /usr/share/color-schemes/
+  cp -r  /color-schemes/Archlinux.colors /usr/share/color-schemes/
+  cp -r  /color-schemes/AArchlinuxDark.colors /usr/share/color-schemes/
   
 }
