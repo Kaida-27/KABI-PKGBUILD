@@ -11,13 +11,12 @@ md5sums=('SKIP')
 
 package() {
 	cd "${srcdir}/${pkgname}" || exit
-  mkdir -p "${pkgdir}"/usr/share/plasma/look-and-feel/org.archlinux.archlinux/
-  cp -r look-and-feel/org.archlinux.archlinux "${pkgdir}"/usr/share/plasma/look-and-feel/org.archlinux.archlinux/
-  mkdir -p "${pkgdir}"/usr/share/wallpapers/Archlinux
-  cp -r  wallpapers/Archlinux "${pkgdir}"/usr/share/wallpapers/Archlinux
-  mkdir -p "${pkgdir}"/usr/share/plasma/desktoptheme/archlinux
-  cp -r  desktoptheme/archlinux "${pkgdir}"/usr/share/plasma/desktoptheme/archlinux
+  mkdir -p "${pkgdir}"/usr/share/plasma/look-and-feel/
+  cp -r look-and-feel/org.archlinux.archlinux "${pkgdir}"/usr/share/plasma/look-and-feel/
+  mkdir -p "${pkgdir}"/usr/share/wallpapers/
+  cp -r  wallpapers/Archlinux "${pkgdir}"/usr/share/wallpapers/
+  mkdir -p "${pkgdir}"/usr/share/plasma/desktoptheme/
+  cp -r  desktoptheme/archlinux "${pkgdir}"/usr/share/plasma/desktoptheme/
    mkdir -p "${pkgdir}"/usr/share/color-schemes/
-  cp -r  color-schemes "${pkgdir}"/usr/share/color-schemes
-  
+  cp -r  color-schemes/. "${pkgdir}"/usr/share/color-schemes
 }
