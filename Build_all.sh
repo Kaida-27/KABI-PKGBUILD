@@ -2,6 +2,15 @@
 SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 mkdir $SCRIPT_DIR/build
 
+tput setaf 8
+echo "#############################################################################################"
+echo "###################                Installing Build Depends            ######################"
+echo "#############################################################################################"
+tput sgr0
+
+sudo pacman -S pacman-contrib
+
+
 ( bash $SCRIPT_DIR/KABI-Calamares/build.sh )|& tee $SCRIPT_DIR/build/KABI-Calamares.log
 
 ( bash $SCRIPT_DIR/KABI-Calamares-Config/build.sh )|& tee $SCRIPT_DIR/build/KABI-Calamares-Config.log
