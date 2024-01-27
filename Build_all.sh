@@ -14,7 +14,7 @@ sudo pacman -S pacman-contrib cmake cppdap jsoncpp rhash boost extra-cmake-modul
 if ! pacman -Qi ckbcomp > /dev/null; then
     git clone https://aur.archlinux.org/ckbcomp.git
     cd $SCRIPT_DIR/ckbcomp
-    makepkg -si
+    yes | makepkg -si
     cd $SCRIPT_DIR
 fi
 
