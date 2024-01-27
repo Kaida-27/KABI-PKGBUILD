@@ -1,6 +1,6 @@
 pkgname=KABI-calamares-config
 _destname1="/etc"
-pkgver=1.0
+pkgver=1.5
 pkgrel=01
 pkgdesc="calamares for KABI"
 arch=('any')
