@@ -1,6 +1,6 @@
 #!/bin/bash
 SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
-destiny=$SCRIPT_DIR"/KABI/"
+destiny=$SCRIPT_DIR"/build/"
 search="KABI-calamares"
 
 tput setaf 2
