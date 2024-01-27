@@ -1,5 +1,7 @@
 #!/bin/bash
-SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+SCRIPT_DIR2="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+cd $SCRIPT_DIR2
+
 destiny=$SCRIPT_DIR"/build/"
 search="KABI-calamares-config"
 
