@@ -1,5 +1,5 @@
 pkgname=plasma-theme-KABI
-pkgver=1.0
+pkgver=1.5
 pkgrel=1
 pkgdesc="Plasma 5 theme for KABI"
 arch=('any')
