@@ -1,6 +1,6 @@
 
 pkgname=timeshift-support
-pkgver=1
+pkgver=1.5
 pkgrel=1
 pkgdesc='Support package for enabling Timeshift with timeshift-autosnap and grub-btrfs'
 arch=(any)
