@@ -3,14 +3,14 @@ pkgver=1.1
 pkgrel=2
 pkgdesc="Plasma 5 theme for KABI"
 arch=('any')
-url="https://github.com/Kaida-27/plasma-theme-KABI"
+url="https://github.com/Kaida-27"
 license=('CCPL:cc-by-sa')
 depends=('plasma-workspace')
 source=("https://github.com/Kaida-27/plasma-theme-KABI")
 md5sums=('SKIP')
 
 package() {
-  mkdir -p "${pkgdir}"/usr/share/plasma/look-and-feel
+  mkdir -p "pkg/${pkgdir}"/usr/share/plasma/look-and-feel
   cp -r "$pkgname"/look-and-feel/org.archlinux.archlinux "${pkgdir}"/usr/share/plasma/look-and-feel/org.archlinux.archlinux
   mkdir -p "${pkgdir}"/usr/share/wallpapers
   cp -r "$pkgname"/wallpapers/Archlinux "${pkgdir}"/usr/share/wallpapers/Archlinux
