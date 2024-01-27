@@ -9,13 +9,15 @@ echo "###################                Installing Build Depends            ###
 echo "#############################################################################################"
 tput sgr0
 
-
 sudo pacman -S pacman-contrib cmake cppdap jsoncpp rhash boost extra-cmake-modules yaml-cpp hwinfo qt5-xmlpatterns squashfs-tools libpwquality appstream-qt --needed --noconfirm
-if ! pacman -Qi nano > /dev/null; then
-    git clone https://aur.archlinux.org/ckbcomp
-    cd ckbcomp
+
+if ! pacman -Qi ckbcomp > /dev/null; then
+    git clone https://aur.archlinux.org/ckbcomp.git
+    cd $SCRIPT_DIR/ckbcomp
     makepkg -si
+    cd $SCRIPT_DIR
 fi
+
 
 ( bash $SCRIPT_DIR/KABI-Calamares/build.sh )|& tee $SCRIPT_DIR/build/KABI-Calamares.log
 
