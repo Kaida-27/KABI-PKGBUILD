@@ -18,7 +18,6 @@ package() {
   mkdir -p "${pkgdir}"/usr/share/plasma/desktoptheme/archlinux
   cp -r  desktoptheme/archlinux "${pkgdir}"/usr/share/plasma/desktoptheme/archlinux
    mkdir -p "${pkgdir}"/usr/share/color-schemes/
-  cp -r  /color-schemes/Archlinux.colors "${pkgdir}"/usr/share/color-schemes/
-  cp -r  /color-schemes/AArchlinuxDark.colors "${pkgdir}"/usr/share/color-schemes/
+  cp -r  /color-schemes/* "${pkgdir}"/usr/share/color-schemes/*
   
 }
