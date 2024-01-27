@@ -10,11 +10,14 @@ source=(git+"https://github.com/Kaida-27/plasma-theme-KABI")
 md5sums=('SKIP')
 
 package() {
-  install -D "$pkgname"/look-and-feel/org.archlinux.archlinux /usr/share/plasma/look-and-feel/org.archlinux.archlinux
-  install -D "$pkgname"/wallpapers/Archlinux /usr/share/wallpapers/Archlinux
-  install -D "$pkgnamer"/desktoptheme/archlinux "${pkgdir}"/usr/share/plasma/desktoptheme/archlinux
-  mkdir -p /usr/share/color-schemes/"${pkgdir}"
+  mkdir -p "${pkgdir}"/usr/share/plasma/look-and-feel
+  cp -r "$pkgname"/look-and-feel/org.archlinux.archlinux "${pkgdir}"/usr/share/plasma/look-and-feel/org.archlinux.archlinux
+  mkdir -p "${pkgdir}"/usr/share/wallpapers
+  cp -r "$pkgname"/wallpapers/Archlinux "${pkgdir}"/usr/share/wallpapers/Archlinux
+  mkdir -p "${pkgdir}"/usr/share/plasma/desktoptheme
+  cp -r "$pkgnamer"/desktoptheme/archlinux "${pkgdir}"/usr/share/plasma/desktoptheme/archlinux
+  mkdir -p "${pkgdir}"/usr/share/color-schemes
   for t in Archlinux ArchlinuxDark; do
-    cp  "$pkgname"/color-schemes/$t.colors /usr/share/color-schemes/"${pkgdir}"
+    cp  "$pkgname"/color-schemes/$t.colors "${pkgdir}"/usr/share/color-schemes/
   done
 }
