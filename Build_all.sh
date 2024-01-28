@@ -2,6 +2,7 @@
 export SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
 mkdir $SCRIPT_DIR/build
+mkdir $SCRIPT_DIR/build/log
 
 tput setaf 8
 echo "#############################################################################################"
@@ -19,17 +20,20 @@ if ! pacman -Qi ckbcomp > /dev/null; then
 fi
 
 
-( bash $SCRIPT_DIR/KABI-Calamares/build.sh )|& tee $SCRIPT_DIR/build/KABI-Calamares.log
+( bash $SCRIPT_DIR/KABI-Calamares/build.sh )|& tee $SCRIPT_DIR/build/log/KABI-Calamares.log
 
-( bash $SCRIPT_DIR/KABI-Calamares-Config/build.sh )|& tee $SCRIPT_DIR/build/KABI-Calamares-Config.log
+( bash $SCRIPT_DIR/calamares-tool/build.sh )|& tee $SCRIPT_DIR/build/log/calamares-tool.log
 
-( bash $SCRIPT_DIR/plasma-theme-KABI/build.sh )|& tee $SCRIPT_DIR/build/plasma-theme-KABI.log
+( bash $SCRIPT_DIR/KABI-Calamares-Config/build.sh )|& tee $SCRIPT_DIR/build/log/KABI-Calamares-Config.log
 
-( bash $SCRIPT_DIR/snapper-support/build.sh )|& tee $SCRIPT_DIR/build/snapper-support.log
+( bash $SCRIPT_DIR/snapper-support/build.sh )|& tee $SCRIPT_DIR/build/log/snapper-support.log
 
-( bash $SCRIPT_DIR/kora-icon-theme/build.sh )|& tee $SCRIPT_DIR/build/kora-icon-theme.log
+( bash $SCRIPT_DIR/KAB-pfetch/build.sh )|& tee $SCRIPT_DIR/build/log/KAB-pfetch.log
 
-( bash $SCRIPT_DIR/calamares-tool/build.sh )|& tee $SCRIPT_DIR/build/calamares-tool.log
+( bash $SCRIPT_DIR/plasma-theme-KABI/build.sh )|& tee $SCRIPT_DIR/build/log/plasma-theme-KABI.log
+
+( bash $SCRIPT_DIR/kora-icon-theme/build.sh )|& tee $SCRIPT_DIR/build/log/kora-icon-theme.log
+
 
 tput setaf 2
 echo "#############################################################################################"
