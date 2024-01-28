@@ -1,7 +1,7 @@
 pkgname=KABI-calamares-config
 _destname1="/etc"
-pkgver=1.5.1
-pkgrel=01
+pkgver=1.5.2
+pkgrel=1
 pkgdesc="calamares for KABI"
 arch=('any')
 url="https://github.com/Kaida-27"
