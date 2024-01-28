@@ -25,7 +25,7 @@ optdepends=(
   'xorg-xrandr: Resolution detection (Multi Monitor + Refresh rates)'
   'xorg-xwininfo: See https://github.com/dylanaraps/neofetch/wiki/Images-in-the-terminal'
 )
-source=("git+https://github.com/kaida-27/KAB-neofetch.git)
+source=("git+https://github.com/kaida-27/KAB-neofetch.git")
 sha256sums=('SKIP')
 
 package() {
