@@ -12,6 +12,6 @@ sha256sums=('SKIP')
 
 package() {
   
-  install -Dm755 "$srcdir/$pkgname-$pkgver/pfetch" "$pkgdir/usr/bin/pfetch"
-  install -Dm644 "$srcdir/$pkgname-$pkgver/LICENSE.md" "$pkgdir/usr/share/licenses/pfetch/LICENSE"
+  install -Dm755 "$srcdir/$pkgname/pfetch" "$pkgdir/usr/bin/pfetch"
+  install -Dm644 "$srcdir/$pkgname/LICENSE.md" "$pkgdir/usr/share/licenses/pfetch/LICENSE"
 }
