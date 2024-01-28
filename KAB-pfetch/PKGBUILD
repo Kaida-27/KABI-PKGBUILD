@@ -1,0 +1,16 @@
+pkgname=KAB-pfetch
+pkgver=0.6.0
+pkgrel=3
+pkgdesc="A pretty system information tool written in POSIX sh."
+arch=('any')
+url="https://github.com/dylanaraps/$pkgname"
+license=('MIT')
+provides=("$pkgname")
+conflicts=('pfetch-git')
+source=("git+https://github.com/Kaida-27/KAB-pfetch")
+
+package() {
+  
+  install -Dm755 "$srcdir/$pkgname-$pkgver/pfetch" "$pkgdir/usr/bin/pfetch"
+  install -Dm644 "$srcdir/$pkgname-$pkgver/LICENSE.md" "$pkgdir/usr/share/licenses/pfetch/LICENSE"
+}
